@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FitRest.Views.NewSleepPage"
+             Shell.PresentationMode="ModalAnimated"
+             Title="New Item">
+    <ContentPage.Content>
+        <StackLayout Spacing="3" Padding="15">
+            <Label Text="Duration In Minutes" FontSize="Medium" />
+            <Entry Text="{Binding DurationInMinutes, Mode=TwoWay}" FontSize="Medium" />
+            <Label Text="Duration In Minutes Of Deep Sleep" FontSize="Medium" />
+            <Entry Text="{Binding DurationInMinutesOfDeepSleep, Mode=TwoWay}" FontSize="Medium" />
+            <Label Text="Rating Of Sleep" FontSize="Medium" />
+            <Entry Text="{Binding RatingOfSleep, Mode=TwoWay}" FontSize="Medium" />
+            <Label Text="StartTime" FontSize="Medium" />
+            <TimePicker Time="{Binding StartTime, Mode=TwoWay}" FontSize="Medium" />
+            <Label Text="EndTime" FontSize="Medium" />
+            <TimePicker Time="{Binding EndTime, Mode=TwoWay}" FontSize="Medium" />
+            <Label Text="Day" FontSize="Medium" />
+            <DatePicker Date="{Binding Day, Mode=TwoWay}" FontSize="Medium" />
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
+                <Button Text="Save" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
